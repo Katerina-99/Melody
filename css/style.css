@@ -75,6 +75,9 @@ body {
 .home-image path:hover {
   opacity: 1;
 }
+path.current-floor {
+  opacity: 1;
+}
 .counter-group {
   display: flex;
   flex-direction: column;
@@ -110,3 +113,4 @@ body {
   color: #fff;
   cursor: pointer;
 }
+
