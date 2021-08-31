@@ -113,4 +113,8 @@ path.current-floor {
   color: #fff;
   cursor: pointer;
 }
-
+.modal {
+  position: fixed; /* фиксированная позиция, поверх всего сайта */
+  left: 0; /* приклеиваем к левому верхнему краю */
+  top: 0; /* приклеиваем к верху */
+}
