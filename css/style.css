@@ -123,8 +123,16 @@ path.current-floor {
   display: flex; /* родительский элемент гибкий */
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
 }
 .modal-dialog {
+  position: relative;
   max-width: 1000px;
   min-height: 565px;
   background-color: #fff;
@@ -142,5 +150,43 @@ path.current-floor {
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
-  margin: 0 26px;
+  margin: 0;
+}
+.modal-info {
+  width: 40%;
+  padding: 50px 46px;
+}
+.flat-list {
+  padding: 0;
+  list-style: none;
+  margin: 50px 0 56px 0;
+}
+.flat-item {
+  margin-bottom: 10px;
+}
+.flat-link {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+}
+.flat-link:hover {
+  color: #3596f5;
+  text-decoration: underline;
+}
+.modal-alert {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #635854;
+}
+.modal-close-button {
+  position: absolute;
+  top: 38px;
+  right: 27px;
+  background-color:#fff;
+  border: none;
+  cursor: pointer;
 }
