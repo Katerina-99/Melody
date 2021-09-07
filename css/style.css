@@ -58,7 +58,9 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding-top: 54px;
+  padding-bottom: 99px;
   display: flex;
+  align-items: center;
 }
 .main-info {
   flex-grow: 1;
@@ -98,6 +100,7 @@ path.current-floor {
   line-height: 44px;
   color: #635854;
   margin: 0;
+  margin-bottom: 116px;
 }
 .floor-counter {
   font-family: "Bebas Neue", sans-serif;
@@ -112,6 +115,7 @@ path.current-floor {
   border-radius: 6px;
   color: #fff;
   cursor: pointer;
+  margin-top: 115px;
 }
 .modal {
   position: fixed; /* фиксированная позиция, поверх всего сайта */
@@ -138,6 +142,14 @@ path.current-floor {
   background-color: #fff;
   flex-grow: 1;
   display: flex;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 0.2s, opacity 0.2s;
+  transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
 }
 .modal-image {
   background-color: #ebebeb;
@@ -193,7 +205,68 @@ path.current-floor {
   position: absolute;
   top: 38px;
   right: 27px;
-  background-color:#fff;
+  background-color: #fff;
   border: none;
   cursor: pointer;
+}
+.footer {
+  background-color: #d7d7d7;
+  padding-top: 50px;
+  padding-bottom: 56px;
+  border-top: 4px solid #3596f5;
+}
+.footer-navbar {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left-block {
+  display: flex;
+  align-items: center;
+}
+.footer-logo {
+  margin-right: 37px;
+}
+.footer-contacts {
+  margin-right: 59px;
+}
+.footer-text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #635854;
+}
+.footer-phone {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: #635854;
+  text-decoration: none;
+}
+.icon-image {
+  width: 20px;
+  height: 20px;
+}
+.icon-link {
+  margin-right: 15px;
+}
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+}
+.list-link {
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration-line: underline;
+  color: #635854;
+}
+.list-item {
+  margin-right: 20px;
+}
+.list-item:last-child {
+  margin-right: 0;
 }

@@ -7,7 +7,9 @@ $(document).ready(function () {
   var modalCloseButton = $('.modal-close-button'); //
   var flatPath = $('.modal-image path') // каждая отдельная квартира
   var flatLink = $('.flat-link')// каждая отдельная квартира в списке справа
-  var currentFlat = 
+  var viewFlatsButton = $('.view-flats');
+
+ /*  var currentFlat =  */
   
   // функция при наведении мышью на этаж
   floorPath.on('mouseover', function () {
@@ -18,6 +20,7 @@ $(document).ready(function () {
 
   floorPath.on('click', toggleModal); //при клике на этаж, вызвать окно 
   modalCloseButton.on('click', toggleModal); //при клике на кнопку "закрыть", убрать окно 
+  viewFlatsButton.on('click', toggleModal);
 
   // отслеживаем клик по кнопке вверх
   counterUp.on('click', function () {
