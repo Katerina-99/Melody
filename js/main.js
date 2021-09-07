@@ -3,13 +3,21 @@ $(document).ready(function () {
   var floorPath = $('.home-image path') // каждый отдельный этаж в SVG
   var counterUp = $('.counter-up') // кнопка увеличения этажа 
   var counterDown = $('.counter-down') // кнопка уменьшения этажа 
+  var modal = $('.modal'); //
+  var modalCloseButton = $('.modal-close-button'); //
+  var flatPath = $('.modal-image path') // каждая отдельная квартира
+  var flatLink = $('.flat-link')// каждая отдельная квартира в списке справа
+  var currentFlat = 
   
-  // фунеция при наведении мышью на этаж
+  // функция при наведении мышью на этаж
   floorPath.on('mouseover', function () {
     floorPath.removeClass('current-floor'); // удаляем активный класс у этажей 
     currentFloor = $(this).attr('data-floor'); // получаем значение текущего этажа
     $('.counter').text(currentFloor); // записываем значение этажа в счетчик справа от картинки
   });
+
+  floorPath.on('click', toggleModal); //при клике на этаж, вызвать окно 
+  modalCloseButton.on('click', toggleModal); //при клике на кнопку "закрыть", убрать окно 
 
   // отслеживаем клик по кнопке вверх
   counterUp.on('click', function () {
@@ -34,4 +42,16 @@ $(document).ready(function () {
       $(`[data-floor=${uscurrentFlor}]`).toggleClass('current-floor'); // подсвечиваем текущий этаж
     }
   });
+
+  //функция открыть-закрыть окно
+  function toggleModal() {
+    modal.toggleClass('is-open');
+  }
+/* 
+  // функция при наведении мышью на квартиру
+  flatPath.on('mouseover', function () {
+    flatLink.removeClass('hover'); // удаляем активный класс у этажей 
+    currentFloor = $(this).attr('data-floor'); // получаем значение текущего этажа
+    $('.counter').text(currentFloor); // записываем значение этажа в счетчик справа от картинки
+  }); */
 });
