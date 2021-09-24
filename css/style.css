@@ -244,6 +244,7 @@ path.current-floor {
   line-height: 20px;
   color: #635854;
   text-decoration: none;
+  margin-top: 5px;
 }
 .icon-image {
   width: 20px;
